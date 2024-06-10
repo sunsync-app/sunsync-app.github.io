@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>_sunsync</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="favicon.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+    
+    html {
+      height: 100%;
+      position: relative
+    }
+    
+    body {
+      margin:0;
+      padding: 0;
+      font-family: Outfit, sans-serif;
+    }
+
+    .colored-img-matching-section {
+      z-index: 0; 
+      height: 33vh;
+    }
+
+    #content {
+      width: 100%;
+      height: 90vh;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left:0;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .download-img {
+      height: 90px;
+      width: auto;
+    }
+
+    #download-img-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    footer {
+      padding: 0.75em;
+      table-layout: fixed;
+    }
+
+    .headline {
+      text-align: center;
+    }
+    
+    .imgWrapper {
+      z-index: 0;
+    }
+    
+    img {   
+      display: block;   
+      width:auto;
+      height:auto;
+      object-fit: cover;
+    }
+    
+    
+    .logo {
+      font-size: 6.5em;
+      font-weight: 700;
+    }
+    
+    .opaque-overlay {
+      position: absolute;
+      top:0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 200%;
+      background-color: rgba(255, 255, 255, 0.25);
+      z-index: 1;
+    }
+
+    @media screen and (max-width: 660px) {  
+      .opaque-overlay {
+        height: 150%;
+      }
+
+      .imgWrapper {
+        height: 75vh;
+        display: flex;
+      }
+
+      .logo {
+        font-size: 5em;
+      }
+    }
+
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body>
+  <div id="background">
+    <div class="colored-img-matching-section" style="background-color: rgba(179, 74, 255, 0.82)"></div>
+    
+    <div class="imgWrapper">
+      <img src="./andyvi_purple_hilly_sunset.jpeg" alt="oops" >
+    </div>
+      
+    <div class="colored-img-matching-section" style="background-color: rgba(105 ,36,115, .9)"></div>
+    
+    <div class="opaque-overlay"></div>
+  </div>
+
+  <div id="content">
+    <div class="headline">
+      <div class="logo">Sunsync</div>
+      <div class="subtext">Get your rhythm straight with sunsync</div>
+    </div>
+
+    <div id="download-img-container">
+      <img class="download-img" src="Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg">
+      <img class="download-img" src="GetItOnGooglePlay_Badge_Web_color_English.png">
+    </div>
+  </div>
+  <footer>
+    <table>
+      <tr>
+        <td>
+          All rights reserved. yada yada. 2023
+        </td>
+      </tr>
+    </table>
+  </footer>
+</body>
+</html>
