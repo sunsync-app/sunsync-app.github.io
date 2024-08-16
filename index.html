@@ -45,12 +45,33 @@
       width: auto;
     }
 
+    .download-img + div {
+      text-align: center;
+      text-justify: center;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      width: 100%;  
+    }
+        
+    .download-img + div + div {
+      font-size: 25px;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+
+    }
+
     #download-img-container {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
       gap: 50px;
+    }
+
+    #download-img-container > div {
+      position: relative;
     }
 
     footer {
@@ -72,7 +93,19 @@
       height:auto;
       object-fit: cover;
     }
-    
+
+    #ios-icon + div {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+    }
+
+    #ios-icon + div + div {
+      background-color: rgba(255, 0, 0, 0.65);
+      color: white;
+      rotate: 10deg;
+      border-radius: 10px;
+      top: 30%;
+    }
     
     .logo {
       font-size: 6.5em;
@@ -88,6 +121,15 @@
       height: 200%;
       background-color: rgba(255, 255, 255, 0.25);
       z-index: 1;
+    }
+
+    #play-icon + div {
+      background-color: rgba(255, 255, 0, 0.35);
+      border-radius: 10px;
+    }
+
+    #play-icon + div + div {
+      top: -35px;
     }
 
     @media screen and (max-width: 660px) {  
@@ -130,8 +172,18 @@
     </div>
 
     <div id="download-img-container">
-      <img class="download-img" src="Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg">
-      <img class="download-img" src="GetItOnGooglePlay_Badge_Web_color_English.png">
+      <div>
+        <img class="download-img" id="ios-icon" src="Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg">
+        <div></div>
+        <div>Coming Soon</div>
+      </div>
+      <div>
+          <a style="display:inline" href="https://play.google.com/apps/testing/com.clusia.sunsync">
+            <img class="download-img" id="play-icon" src="GetItOnGooglePlay_Badge_Web_color_English.png">
+            <div></div>
+            <div>Open Testing Now</div>
+          </a>
+      </div>
     </div>
   </div>
   <footer>
